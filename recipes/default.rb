@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: campfire_handler
+# Cookbook:: campfire_handler
 # Recipe:: default
 #
-# Copyright 2011, Heavy Water Ops, LLC.
+# Copyright:: 2011, Heavy Water Ops, LLC.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,14 +18,12 @@
 # limitations under the License.
 #
 
-include_recipe "chef_handler::default"
-
-chef_gem "chef-handler-campfire"
+chef_gem 'chef-handler-campfire'
 
 args = [
-        :token => "node['campfire']['token']",
-        :room => "node['campfire']['room']",
-        :subdomain => "node['campfire']['subdomain']"
+        token: "node['campfire']['token']",
+        room: "node['campfire']['room']",
+        subdomain: "node['campfire']['subdomain']",
        ]
 
 chef_handler 'Chef::Handler::Campfire' do
