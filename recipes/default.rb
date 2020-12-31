@@ -32,4 +32,3 @@ chef_handler 'Chef::Handler::Campfire' do
   source File.join(Gem.all_load_paths.grep(/chef-handler-campfire/).first,
                    'chef', 'handler', 'campfire.rb')
 end
-
